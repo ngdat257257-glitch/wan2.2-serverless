@@ -3,4 +3,5 @@ import runpod
 def handler(job):
     return {"status": "ok"}
 
-runpod.serverless.start({"handler": handler})
+if __name__ == "__main__":
+    runpod.serverless.start(handler_name="handler")
